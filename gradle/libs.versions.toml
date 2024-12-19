@@ -1,0 +1,28 @@
+[versions]
+kotlin = "2.0.20"
+kotlinx-multik = "0.2.3"
+apache-commons-math = "3.6.1"
+test-junit = "5.11.4"
+test-assertk = "0.28.1"
+test-mockito = "5.4.0"
+test-pitest-plugin = "1.15.0"
+test-pitest-tool = "1.17.3"
+test-pitest-junit = "1.2.1"
+plugin-versions = "0.51.0"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-multik-core = { module = "org.jetbrains.kotlinx:multik-core", version.ref = "kotlinx-multik" }
+kotlinx-multik-default = { module = "org.jetbrains.kotlinx:multik-default", version.ref = "kotlinx-multik" }
+apache-commons-math = { module = "org.apache.commons:commons-math3", version.ref = "apache-commons-math" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "test-junit" }
+assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "test-assertk" }
+mockito = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "test-mockito" }
+
+[bundles]
+kotlinx-multik = ["kotlinx-multik-core", "kotlinx-multik-default"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+pitest = { id = "info.solidsoft.pitest", version.ref = "test-pitest-plugin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "plugin-versions" }
